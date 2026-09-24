@@ -1,26 +1,82 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-black text-brand-off-white px-6 md:px-16 py-16 md:py-24 flex flex-col items-center border-t border-brand-charcoal">
-      <div className="max-w-4xl w-full text-center mb-16 md:mb-20">
-        <h2 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-light tracking-tight mb-8 md:mb-10 leading-tight">
-          Let's create<br className="md:hidden" /> something timeless.
-        </h2>
-        <Link href="/contact" className="inline-flex items-center justify-center border border-brand-off-white px-8 py-5 md:px-10 md:py-4 text-sm md:text-xs font-semibold uppercase tracking-[0.2em] hover:bg-brand-pink hover:text-brand-black hover:border-brand-pink hover:shadow-[0_0_15px_rgba(253,232,232,0.4)] transition-all duration-500 min-h-[44px] min-w-[44px]">
+    <footer className="bg-brand-black text-brand-off-white overflow-hidden">
+      {/* ── CTA block ──────────────────────────────────── */}
+      <div className="relative px-6 md:px-16 pt-24 pb-20 md:pt-32 md:pb-28 text-center border-b border-white/10">
+        {/* Ghost typography behind CTA */}
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 flex items-center justify-center font-serif font-bold text-[18vw] text-white/[0.025] uppercase tracking-tighter select-none pointer-events-none leading-none overflow-hidden"
+        >
+          Timeless
+        </span>
+
+        <p className="relative font-serif text-[clamp(2.2rem,6vw,5rem)] font-light leading-tight mb-10 md:mb-14 text-balance">
+          Let's create something<br className="hidden md:inline" /> timeless.
+        </p>
+
+        <Link
+          href="/contact"
+          className="relative inline-flex items-center justify-center border border-brand-off-white/60 text-[11px] uppercase tracking-[0.28em] font-semibold px-10 py-4 transition-all duration-500
+            hover:bg-brand-pink hover:text-brand-black hover:border-brand-pink hover:shadow-[0_0_24px_rgba(242,217,217,0.35)]
+            min-h-[44px]"
+        >
           Inquire Now
         </Link>
       </div>
-      
-      <div className="w-full flex flex-col md:flex-row justify-between items-center text-xs tracking-[0.15em] md:tracking-widest uppercase text-brand-gray gap-8 md:gap-0">
-        <div className="order-2 md:order-1 opacity-70">
-          &copy; {new Date().getFullYear()} Thotz Photography
+
+      {/* ── Info row ───────────────────────────────────── */}
+      <div className="px-6 md:px-16 py-10 md:py-14 flex flex-col md:flex-row items-center md:items-start justify-between gap-10 text-[11px] uppercase tracking-[0.18em] text-brand-gray">
+        {/* Brand */}
+        <div className="text-center md:text-left">
+          <p className="font-serif text-base tracking-widest text-brand-off-white mb-1">Thotz Photography</p>
+          <p>Auckland, New Zealand</p>
         </div>
-        <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 items-center order-1 md:order-2 w-full md:w-auto">
-          <a href="#" className="p-3 md:p-0 hover:text-brand-pink hover:drop-shadow-[0_0_8px_rgba(253,232,232,0.3)] transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center">Instagram</a>
-          <a href="#" className="p-3 md:p-0 hover:text-brand-pink hover:drop-shadow-[0_0_8px_rgba(253,232,232,0.3)] transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center">Facebook</a>
-          <a href="#" className="p-3 md:p-0 hover:text-brand-pink hover:drop-shadow-[0_0_8px_rgba(253,232,232,0.3)] transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center">Pinterest</a>
+
+        {/* Contact */}
+        <div className="text-center space-y-2">
+          <a
+            href="https://wa.me/64224618429"
+            target="_blank"
+            rel="noreferrer"
+            className="block hover:text-brand-pink transition-colors duration-300"
+          >
+            +64 22 461 8429
+          </a>
+          <a
+            href="mailto:thotzphotography@gmail.com"
+            className="block hover:text-brand-pink transition-colors duration-300"
+          >
+            thotzphotography@gmail.com
+          </a>
         </div>
+
+        {/* Social — text only, no icons */}
+        <div className="flex items-center gap-6 md:gap-8">
+          <a
+            href="https://www.instagram.com/tho_tz._photography_official/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-brand-pink-hover transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-brand-pink-hover after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/thotzphotography"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-brand-pink-hover transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-brand-pink-hover after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Facebook
+          </a>
+        </div>
+      </div>
+
+      {/* ── Copyright ──────────────────────────────────── */}
+      <div className="px-6 md:px-16 pb-8 text-center md:text-left text-[10px] uppercase tracking-[0.2em] text-brand-gray/40">
+        © {new Date().getFullYear()} Thotz Photography. All rights reserved.
       </div>
     </footer>
   );
