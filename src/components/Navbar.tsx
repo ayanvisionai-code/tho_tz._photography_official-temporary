@@ -14,11 +14,11 @@ export default function Navbar() {
         </div>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-xs font-medium tracking-[0.2em] uppercase">
-          <Link href="/portfolio" className="hover:opacity-70 transition-opacity">Portfolio</Link>
-          <Link href="/services" className="hover:opacity-70 transition-opacity">Services</Link>
-          <Link href="/about" className="hover:opacity-70 transition-opacity">About</Link>
-          <Link href="/contact" className="hover:opacity-70 transition-opacity">Contact</Link>
+        <div className="hidden md:flex space-x-10 text-xs font-medium tracking-[0.2em] uppercase">
+          <Link href="/portfolio" className="hover:text-brand-pink hover:drop-shadow-[0_0_8px_rgba(253,232,232,0.5)] transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300">Portfolio</Link>
+          <Link href="/services" className="hover:text-brand-pink hover:drop-shadow-[0_0_8px_rgba(253,232,232,0.5)] transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300">Services</Link>
+          <Link href="/about" className="hover:text-brand-pink hover:drop-shadow-[0_0_8px_rgba(253,232,232,0.5)] transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300">About</Link>
+          <Link href="/contact" className="hover:text-brand-pink hover:drop-shadow-[0_0_8px_rgba(253,232,232,0.5)] transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300">Contact</Link>
         </div>
 
         {/* Mobile Hamburger Toggle */}

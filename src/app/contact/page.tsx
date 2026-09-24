@@ -74,7 +74,7 @@ export default function Contact() {
               <textarea id="message" rows={4} value={formData.message} onChange={handleChange} className="w-full bg-transparent border-b border-brand-charcoal/20 pb-4 focus:outline-none focus:border-brand-black transition-colors resize-none text-base" placeholder="Tell us more about your vision..."></textarea>
             </div>
             {error && <p className="text-red-700 text-xs tracking-wide">{error}</p>}
-            <button type="submit" className="w-full bg-brand-black text-brand-off-white text-xs font-medium uppercase tracking-[0.2em] py-6 hover:bg-brand-charcoal transition-all duration-300">
+            <button type="submit" className="w-full bg-brand-black text-brand-off-white text-xs font-medium uppercase tracking-[0.2em] py-6 hover:bg-brand-pink hover:text-brand-black hover:shadow-[0_0_20px_rgba(253,232,232,0.5)] transition-all duration-300">
               Submit Inquiry
             </button>
           </form>

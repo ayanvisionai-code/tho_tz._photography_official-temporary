@@ -17,32 +17,60 @@ export default function Portfolio() {
         <p className="text-xs uppercase tracking-[0.3em] font-medium text-brand-gray">A collection of moments</p>
       </div>
       
-      {/* Asymmetric / Scrapbook Gallery */}
-      <div className="flex flex-col gap-32">
-        <div className="flex flex-col md:flex-row gap-10 items-center">
-          <div className="w-full md:w-3/5 relative aspect-square md:aspect-video z-10 bg-brand-light-gray">
-            <Image src={images[0]} alt="Portfolio 1" fill className="object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" />
+      {/* Cinematic Editorial Gallery */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-24 md:gap-x-12 md:gap-y-32">
+        {/* Row 1: Large Feature */}
+        <div className="col-span-1 md:col-span-12 animate-slide-up">
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-brand-light-gray group">
+            <Image src={images[0]} alt="Portfolio Feature" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" />
           </div>
-          <div className="w-full md:w-2/5 md:-ml-20 relative aspect-[3/4] z-20 border-[12px] border-brand-off-white bg-brand-light-gray">
-            <Image src={images[1]} alt="Portfolio 2" fill className="object-cover" />
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row-reverse gap-10 items-center mt-20">
-          <div className="w-full md:w-1/2 relative aspect-square z-10 bg-brand-light-gray">
-            <Image src={images[2]} alt="Portfolio 3" fill className="object-cover shadow-2xl" />
-          </div>
-          <div className="w-full md:w-1/2 md:-mr-16 relative aspect-video z-20 mt-16 md:mt-0 bg-brand-light-gray">
-            <Image src={images[3]} alt="Portfolio 4" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+          <div className="mt-6 flex justify-between items-center text-xs uppercase tracking-widest text-brand-gray">
+            <span>01</span>
+            <span>Cinematic Overview</span>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-16 items-start mt-20">
-          <div className="w-full md:w-1/3 relative aspect-[3/4] mt-10 md:mt-32 bg-brand-light-gray">
-            <Image src={images[4]} alt="Portfolio 5" fill className="object-cover shadow-xl" />
+        {/* Row 2: Editorial Split */}
+        <div className="col-span-1 md:col-span-5 md:mt-24 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="relative w-full aspect-[3/4] overflow-hidden bg-brand-light-gray group">
+            <Image src={images[1]} alt="Portfolio Detail 1" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" />
           </div>
-          <div className="w-full md:w-2/3 relative aspect-video bg-brand-light-gray">
-            <Image src={images[5]} alt="Portfolio 6" fill className="object-cover" />
+          <div className="mt-4 text-xs uppercase tracking-widest text-brand-gray text-right">02</div>
+        </div>
+        <div className="col-span-1 md:col-span-7 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="relative w-full aspect-square md:aspect-[4/3] overflow-hidden bg-brand-light-gray group">
+            <Image src={images[2]} alt="Portfolio Detail 2" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" />
+          </div>
+          <div className="mt-4 text-xs uppercase tracking-widest text-brand-gray">03</div>
+        </div>
+
+        {/* Row 3: Full Width with text */}
+        <div className="col-span-1 md:col-span-12 my-12 md:my-24 text-center animate-slide-up">
+           <h2 className="font-serif text-3xl md:text-5xl font-light text-brand-charcoal text-balance">The art of visual storytelling.</h2>
+        </div>
+
+        {/* Row 4: Offset Grid */}
+        <div className="col-span-1 md:col-span-8 animate-slide-up">
+          <div className="relative w-full aspect-video md:aspect-[16/10] overflow-hidden bg-brand-light-gray group">
+            <Image src={images[3]} alt="Portfolio Detail 3" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" />
+          </div>
+          <div className="mt-4 text-xs uppercase tracking-widest text-brand-gray text-right">04</div>
+        </div>
+        <div className="col-span-1 md:col-span-4 md:-mt-16 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="relative w-full aspect-[4/5] overflow-hidden bg-brand-light-gray group">
+            <Image src={images[4]} alt="Portfolio Detail 4" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" />
+          </div>
+          <div className="mt-4 text-xs uppercase tracking-widest text-brand-gray">05</div>
+        </div>
+
+        {/* Row 5: Single End */}
+        <div className="col-span-1 md:col-span-10 md:col-start-2 mt-12 md:mt-16 animate-slide-up">
+          <div className="relative w-full aspect-video overflow-hidden bg-brand-light-gray group">
+            <Image src={images[5]} alt="Portfolio Detail 5" fill className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105" />
+          </div>
+          <div className="mt-4 flex justify-between items-center text-xs uppercase tracking-widest text-brand-gray">
+            <span>06</span>
+            <span>Fin</span>
           </div>
         </div>
       </div>
