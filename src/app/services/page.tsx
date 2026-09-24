@@ -10,19 +10,19 @@ export default function Services() {
   ];
 
   return (
-    <div className="pt-40 pb-20 px-6 max-w-7xl mx-auto bg-[#FAFAF7]">
-      <h1 className="font-serif text-5xl md:text-7xl text-center font-light tracking-tight mb-24">Our Services.</h1>
+    <div className="pt-40 pb-32 px-6 max-w-7xl mx-auto bg-brand-off-white font-sans text-brand-black">
+      <h1 className="font-serif text-[clamp(3.5rem,8vw,6rem)] text-center font-light tracking-tight mb-32 text-brand-charcoal">Our Services.</h1>
       
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-32 md:gap-48">
         {services.map((s, idx) => (
-          <div key={s.title} className={`flex flex-col md:flex-row items-center gap-12 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-            <div className="w-full md:w-1/2 relative aspect-video shadow-lg">
-              <Image src={s.img} alt={s.title} fill className="object-cover" />
+          <div key={s.title} className={`flex flex-col md:flex-row items-center gap-16 md:gap-24 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+            <div className="w-full md:w-1/2 relative aspect-[4/3] md:aspect-video shadow-xl bg-brand-light-gray group overflow-hidden">
+              <Image src={s.img} alt={s.title} fill className="object-cover transition-transform duration-[2s] group-hover:scale-105" />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center items-start px-8">
-              <h2 className="font-serif text-4xl mb-4 font-light">{s.title}</h2>
-              <p className="text-gray-500 mb-8 max-w-sm leading-relaxed">{s.desc}</p>
-              <Link href={s.link} className="text-xs uppercase tracking-[0.2em] font-semibold border-b border-black pb-1 hover:text-gray-400 transition-all">
+            <div className={`w-full md:w-1/2 flex flex-col justify-center ${idx % 2 !== 0 ? 'md:items-end md:text-right' : 'items-start'} px-4 md:px-8`}>
+              <h2 className="font-serif text-[clamp(2.5rem,4vw,3.5rem)] mb-6 font-light text-brand-charcoal">{s.title}</h2>
+              <p className="text-brand-gray mb-10 max-w-sm leading-relaxed text-sm md:text-base">{s.desc}</p>
+              <Link href={s.link} className="inline-block text-xs uppercase tracking-[0.2em] font-semibold border-b border-brand-black pb-2 hover:text-brand-gray hover:border-brand-gray transition-all">
                 Explore {s.title}
               </Link>
             </div>

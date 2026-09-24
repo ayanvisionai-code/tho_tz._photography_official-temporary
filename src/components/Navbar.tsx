@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link href="/contact" className="hover:opacity-70 transition-opacity">Contact</Link>
         </div>
 
-        {/* Mobile Hamburger Toggle (minimum 44x44 touch target) */}
+        {/* Mobile Hamburger Toggle */}
         <button 
           className="md:hidden flex flex-col justify-center items-center w-11 h-11 space-y-1.5 z-[60]"
           onClick={() => setIsOpen(!isOpen)}
@@ -35,15 +35,15 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 bg-[#111] text-[#FAFAF7] z-50 flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 bg-brand-black text-brand-off-white z-50 flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${
           isOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-4'
         }`}
       >
         <div className="flex flex-col items-center space-y-8 text-2xl font-serif tracking-widest uppercase">
-          <Link href="/portfolio" className="hover:text-gray-400 transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>Portfolio</Link>
-          <Link href="/services" className="hover:text-gray-400 transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>Services</Link>
-          <Link href="/about" className="hover:text-gray-400 transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>About</Link>
-          <Link href="/contact" className="hover:text-gray-400 transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="/portfolio" className="hover:text-brand-light-gray transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>Portfolio</Link>
+          <Link href="/services" className="hover:text-brand-light-gray transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link href="/about" className="hover:text-brand-light-gray transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>About</Link>
+          <Link href="/contact" className="hover:text-brand-light-gray transition-colors py-2 px-4" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       </div>
     </>

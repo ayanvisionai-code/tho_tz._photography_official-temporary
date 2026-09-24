@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const cormorant = Cormorant_Garamond({ 
+  subsets: ["latin"], 
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap" 
+});
 
 export const metadata: Metadata = {
   title: "Thotz Photography | Cinematic & Editorial",
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} font-sans min-h-screen flex flex-col bg-[#FAFAF7] text-[#1A1A1A] selection:bg-indigo-100 selection:text-indigo-900`}>
+      <body className={`${inter.variable} ${cormorant.variable} font-sans min-h-screen flex flex-col bg-[#F9F9F7] text-[#1A1A1A] antialiased selection:bg-[#333333] selection:text-[#F9F9F7]`}>
         <Navbar />
         <main className="flex-grow w-full">
           {children}
