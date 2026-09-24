@@ -7,8 +7,8 @@ const services = [
     title: "Weddings",
     desc:  "A cinematic documentation of your love. We tell your wedding story with honesty, warmth, and a refined editorial eye — from the quiet morning preparations to the final dance.",
     link:  "/weddings",
-    img:   "/images/tho_tz._photography_official_1765622241_3786636268257020836_5469771706.jpg",
-    imgPos:"object-top",
+    img:   "/images/tho_tz._photography_official_1776389503_3876958454023908952_5469771706.jpg",
+    imgPos:"object-[center_20%]",
     aspect:"aspect-[3/4]",
   },
   {
